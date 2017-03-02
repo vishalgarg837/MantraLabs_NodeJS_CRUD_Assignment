@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>
+			CRUD Web Application
+		</title>
+  	</head>
+	<body>
+		<h1>{{title}}</h1>
+			<form action="/signin/checkValidCreds" method="post">
+				Enter UserName<input type="text" name="uName"></input>
+				Enter Password<input type="password" name="uPassword"></input>
+				<input type="submit" value="SignIn">
+			</form>
+			<form action="/signin/register">
+				<input type="submit" value="Register">
+			</form>
+  	</body>
+</html>

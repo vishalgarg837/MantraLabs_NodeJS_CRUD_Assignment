@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>
+			Learning NodeJs
+		</title>
+  	</head>
+	<body>
+		<h1>{{title}}</h1>
+		<h2>Array and it's addition: </h2>
+      		<script>
+      			var sum = 0;
+      		</script>
+      		{{#each titleArr}}
+      			<p>{{@index}}. {{this}}</p>
+      			<script>
+      				sum += {{this}};
+      			</script>
+			{{/each}}
+			<p>Sum of Array: </p>
+			<script>
+				document.write(sum);
+			</script>	
+			<form action="/arr/printAdd" method="post">
+				Enter Sum of Array: <input type="text" name="text1">
+				<input type="submit" value="Submit Sum of Array">
+			</form>
+  	</body>
+</html>

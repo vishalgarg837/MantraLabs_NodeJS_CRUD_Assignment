@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>
+			Learning NodeJs
+		</title>
+  	</head>
+	<body>
+		<h1 align = "center">{{title}}</h1>
+		<h2 align = "center">Student Details: </h2>
+		<form align = "center" action = "/signin/deleteLoad" method = "POST">
+			<select align = "center" id = "Id" name = "selectId" >
+				{{#each res}}
+					<option>{{this.student_id}}</option>
+				{{/each}}
+			</select>
+			<input align = "center" type = "submit" value = "Load" style="height:25px; width:100px"/>
+		</form>
+  	</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>
+			Learning NodeJs
+		</title>
+		<script>
+			/*var count = 0;
+			{{#each res}}
+				count++;
+			{{/each}}
+			function setData() {
+				var selectCtrl = document.getElementById("Id");
+				var selectedItem =  selectCtrl.options[selectCtrl.selectedIndex];
+				var elm0 = parseInt(selectedItem.text);
+				alert(elm0);
+				{{#each res}}
+					if(elm0 == parseInt(this.student_id)) {
+						alert(elm0);
+						var elm1 = document.getElementById("stuFNameId");
+						elm1.value = this.first_name;
+						document.getElementById("stuLNameId").value = this.last_name;
+						document.getElementById("stuClassId").value = this.class;
+						document.getElementById("stuCourseId").value = this.course;
+					}
+				{{/each}}
+				return true;
+			}*/
+		</script>
+  	</head>
+	<body>
+		<h1 align = "center">{{title}}</h1>
+		<h2 align = "center">Student Details: </h2>
+		<!--{{#each res}}
+			<p>{{this.student_id}} {{this.first_name}} {{this.last_name}} {{this.class}} {{this.course}}</p>
+		{{/each}}-->
+		<form align = "center" action = "/signin/updateLoad" method = "POST">
+			<select align = "center" id = "Id" name = "selectId" >
+			{{#each res}}
+				<option>{{this.student_id}}</option>
+			{{/each}}
+		</select>
+			<input align = "center" type = "submit" value = "Load" style="height:25px; width:100px"/>
+		</form>
+		<!--<input type = "text" id = "stuFNameId" name = "stuFName"></input>
+		<input type = "text" id = "stuLNameId" name = "stuLName"></input>
+		<input type = "text" id = "stuClassId" name = "stuClass"></input>
+		<input type = "text" id = "stuCourseId" name = "stuCourse"></input>-->
+  	</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>
+			Learning NodeJs
+		</title>
+  	</head>
+	<body>
+		<h1 align = "center">{{title}}</h1>
+		<h2 align = "center">Student Details: </h2>
+		<form align = "center" name = "deleteForm" action = "/signin/deleteFinalDB" method = "POST">
+			{{#each res}}
+				<input type = "text" id ="studentId" name = "studentNameId" value="{{this.student_id}}" readonly></input><br>
+				<input type = "text" id = "stuFNameId" name = "stuFName" value="{{this.first_name}}"></input><br>
+				<input type = "text" id = "stuLNameId" name = "stuLName" value="{{this.last_name}}"></input><br>
+				<input type = "text" id = "stuClassId" name = "stuClass" value="{{this.sclass}}"></input><br>
+				<input type = "text" id = "stuCourseId" name = "stuCourse" value="{{this.course}}"></input><br>
+				<input type = "submit" value = "Delete"/>
+			{{/each}}
+		</form>
+  	</body>
+</html>

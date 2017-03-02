@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>
+			CRUD Web Application
+		</title>
+		<script>
+			function checkValid() {
+				var uname = document.getElementById("uNameId").value; 
+				var pass1 = document.getElementById("uPasswordId1").value;
+				var pass2 = document.getElementById("uPasswordId2").value;
+				if(uname == "" || pass1 == "" || pass2 == "") {
+					alert("Please fill all the fields!");
+					return false;
+				} else if(pass1 != pass2) {
+					alert("Please enter same password in password fields!");
+					return false;
+				}
+				return true;
+			}
+		</script>
+  	</head>
+	<body>
+		<h1 align = "center">{{title}}</h1>
+			<form align = "center" action="/signin/registerStuDB" method="POST" onsubmit = "return checkValid()">
+				Enter UserName<input type="text" name="uName" id="uNameId"></input><br>
+				Enter Password<input type="password" name="uPassword" id="uPasswordId1"></input><br>
+				Confirm Password<input type="password" name="uPassword2" id="uPasswordId2"></input><br>
+				<input type="submit" value="Register">
+			</form>
+  	</body>
+</html>

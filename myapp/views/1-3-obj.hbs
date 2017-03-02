@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>
+			Learning NodeJs
+		</title>
+  	</head>
+	<body>
+		<h1>{{title}}</h1>
+		<h2>Accessing nested object's elements: </h2>
+			<h3>Using each loop</h3>
+      			{{#each objRef}}
+      				<p>{{@index}}. {{this.type}} {{this.year}}</p>
+				{{/each}}	
+			<h3>Using with loop</h3>	
+			{{#with objRef as |myObjRef|}}
+				<p>{{@index}}. {{myObjRef.type}} {{myObjRef}}</p>
+			{{/with}}	
+  	</body>
+</html>

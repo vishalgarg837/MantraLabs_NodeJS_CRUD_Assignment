@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>
+			CRUD Web Application
+		</title>
+		<style>
+			table, th, td {
+    			border: 1px solid black;
+			}
+		</style>
+  	</head>
+	<body>
+		<h1>{{title}}</h1>
+			<form action="/signin/teachAskConfirmAdd">
+				<input type="submit" value="Add" style="height:25px; width:100px">
+			</form>
+			<table align="center" WIDTH=1200 HEIGHT=200>
+				<tr>
+    				<th>ID</th>
+    				<th>First Name</th>
+    				<th>Last Name</th>
+    				<th>Class</th>
+    				<th>Course</th>
+    				<th>Select Option</th>
+				</tr>
+				{{#each res}}
+					<tr>
+						<td align="center">{{this.student_id}}</td>
+						<td align="center">{{this.first_name}}</td>
+						<td align="center">{{this.last_name}}</td>
+						<td align="center">{{this.sclass}}</td>
+						<td align="center">{{this.course}}</td>
+						<td align="center">
+							<a href="/signin/updateTableLoad/{{this.student_id}}">Update</a>
+							<a href="/signin/deleteTableLoad/{{this.student_id}}">Delete</a>
+						</td>
+					</tr>
+				{{/each}}
+			</table>
+			<form action="/signin/teachAskConfirmUpdate">
+				<input type="submit" value="Update" style="height:25px; width:100px">
+			</form>
+			<form action="/signin/teachAskDelete">
+				<input type="submit" value="Delete" style="height:25px; width:100px">
+			</form>
+  	</body>
+</html>
